@@ -1,0 +1,78 @@
+/* Seite im Aufbau. Keine fremden Schriften, nichts von anderen Servern, keine Cookies. */
+:root {
+  --bg: #0b0d10; --bg2: #090b0d; --panel: #12161a; --panel2: #171c21; --line: rgba(255,255,255,.08); --line2: rgba(255,255,255,.14);
+  --ink: #edf1f4; --text: #c9d1d8; --muted: #8b959e; --leiser: #5b656e;
+  --blau: #3d84ff; --blau2: #12C7CE; --mint: #6fe0bf; --gold: #f2b45a;
+  --sans: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --mono: "Cascadia Code", ui-monospace, Consolas, monospace;
+  --hand: "Segoe Script", "Bradley Hand", "Brush Script MT", cursive;
+  --c: #8ab4ff; --lx: -999px; --ly: -999px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { font: 17px/1.65 var(--sans); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+body { margin: 0; overflow-x: clip; }
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { font-family: var(--display); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+.eyebrow { font: 600 11.5px var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.kopf { position: sticky; top: 0; z-index: 50; background: rgba(11,13,16,.72); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid var(--line); }
+.kopf .wrap { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.marke { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 600 15px var(--display); color: var(--ink); }
+.licht { position: relative; isolation: isolate; }
+.licht::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none;
+  background: radial-gradient(460px circle at var(--lx) var(--ly), color-mix(in srgb, var(--c) 10%, transparent), transparent 60%); }
+.licht::after { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: radial-gradient(280px circle at var(--lx) var(--ly), color-mix(in srgb, var(--c) 75%, white), transparent 65%), linear-gradient(var(--line), var(--line));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+@supports (animation-timeline: view()) { @keyframes aufrichten { from { transform: perspective(1600px) rotateX(18deg) scale(.94); opacity: .3; } } @keyframes auf { from { opacity: 0; transform: translateY(40px); } } }
+@keyframes vk-rein { 0% { transform: translateY(100px) rotateX(70deg) rotateZ(-10deg) scale(.85); opacity: 0; } 50% { opacity: 1; } 75% { transform: translateY(-8px) rotateX(-5deg); } 100% { transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media (max-width: 560px) { .wrap { padding: 0 16px; } .marke span.txt { display: none; } }
+@keyframes vt-raus { to { opacity: 0; transform: scale(.97); filter: blur(8px); } }
+@keyframes vt-rein { from { opacity: 0; transform: translateY(40px) scale(1.01); filter: blur(6px); } }
+@keyframes vt-leiste { from { transform: translateY(-100%); opacity: 0; } }
+.zeichen { width: 30px; height: 30px; border-radius: 9px; flex: none; background: linear-gradient(135deg, #1665F5, #12C7CE 55%, #6fe0bf); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 0 24px rgba(18,199,206,.25); position: relative; }
+.zeichen::after { content: ""; position: absolute; inset: 8px; border-radius: 4px; border: 2px solid rgba(255,255,255,.85); border-right-color: transparent; transform: rotate(45deg); }
+.light-held { position: relative; min-height: calc(100vh - 64px - 140px); display: grid; align-content: center; padding: 80px 0 40px; isolation: isolate; }
+.light-held::before { content: ""; position: absolute; left: 50%; top: 10%; width: 1100px; height: 700px; translate: -50% 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(22,101,245,.22), rgba(18,199,206,.08) 55%, transparent); filter: blur(20px); }
+.light-held h1 { font-size: clamp(44px, 7.4vw, 100px); line-height: .96; letter-spacing: -.05em; margin: 20px 0 24px; font-weight: 700; max-width: 14ch; }
+.light-held h1 span { background: linear-gradient(90deg, #6aa5ff, #12C7CE 55%, #6fe0bf); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.light-held p { font-size: clamp(18px, 1.6vw, 21px); max-width: 50ch; margin: 0; }
+.light-fuss { margin-top: 110px; border-top: 1px solid var(--line); padding: 30px 0 44px; font-size: 14px; color: var(--muted); }
+.light-fuss .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; }
+.light-fuss a { text-decoration: none; }
+.light-fuss a:hover { color: var(--ink); }
+.light-fuss .rechts { margin-left: auto; font: 500 12px var(--mono); }
+@media (max-width: 760px) { .light-fuss .rechts { margin-left: 0; } }
+.bald-raster { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 64px; }
+.bald-karte { position: relative; border-radius: 22px; overflow: hidden; background: var(--panel); aspect-ratio: 16 / 10; isolation: isolate; }
+.bald-karte .glas { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255,255,255,.05), transparent 40%), rgba(11,13,16,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.bald-karte .schild { position: absolute; left: 22px; bottom: 20px; display: flex; align-items: center; gap: 10px; font: 600 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+.bald-karte .schild::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #f2b45a; box-shadow: 0 0 10px #f2b45a; }
+.bald-karte .nr { position: absolute; right: 22px; top: 16px; font: 700 64px/1 var(--display); color: rgba(255,255,255,.08); letter-spacing: -.04em; }
+@keyframes treiben { to { transform: translate(4%, -3%) rotate(6deg) scale(1.05); } }
+@media (max-width: 760px) { .bald-raster { grid-template-columns: 1fr; } }
+.geruest { position: absolute; inset: 9% 7% 16%; border-radius: 12px; background: #0f1418; box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 30px 60px -20px #000;
+  display: grid; grid-template-rows: 9% 1fr; filter: blur(2.5px); overflow: hidden; }
+.geruest .t { background: #0b0f13; border-bottom: 1px solid rgba(255,255,255,.06); }
+.geruest .k { display: grid; grid-template-columns: 22% 1fr 24%; gap: 3%; padding: 4%; }
+.geruest .k > div { display: grid; align-content: start; gap: 9%; }
+.geruest b { display: block; height: 0; padding-bottom: 14%; border-radius: 6px; background: rgba(255,255,255,.07); }
+.geruest .m b { padding-bottom: 62%; border-radius: 10px; background: radial-gradient(60% 60% at 50% 45%, color-mix(in srgb, var(--farbe) 35%, transparent), rgba(255,255,255,.04)); }
+.geruest .m b + b { padding-bottom: 18%; background: rgba(255,255,255,.05); }
+.geruest::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.12) 50%, transparent 70%); background-size: 250% 100%;
+  animation: schimmer 3.2s ease-in-out infinite; }
+@keyframes schimmer { from { background-position: 120% 0; } to { background-position: -120% 0; } }
+.bald-karte.a { --farbe: #1665F5; }
+.bald-karte.b { --farbe: #6fe0bf; }
+.bald-karte { background: radial-gradient(70% 70% at 50% 40%, color-mix(in srgb, var(--farbe) 14%, transparent), transparent 70%), var(--panel); }
+.bald-karte .glas { backdrop-filter: none; -webkit-backdrop-filter: none; background: linear-gradient(180deg, transparent 55%, rgba(11,13,16,.6)); }
+.bald-karte .baubalken { position: absolute; left: 22px; right: 22px; bottom: 52px; height: 3px; border-radius: 3px; background: rgba(255,255,255,.08); overflow: hidden; }
+.bald-karte .baubalken i { position: absolute; inset: 0 auto 0 0; width: 35%; border-radius: 3px; background: linear-gradient(90deg, transparent, var(--farbe)); animation: bauen 2.6s ease-in-out infinite; }
+@keyframes bauen { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
+@media (prefers-reduced-motion: reduce) { .geruest::after, .bald-karte .baubalken i { animation: none; } }
