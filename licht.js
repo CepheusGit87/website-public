@@ -8,7 +8,7 @@
     if (wartet) return; wartet = true;
     requestAnimationFrame(() => {
       wartet = false;
-      document.querySelectorAll('.licht').forEach(el => {
+      document.querySelectorAll('.karte').forEach(el => {
         const r = el.getBoundingClientRect();
         el.style.setProperty('--lx', (x - r.left) + 'px'); el.style.setProperty('--ly', (y - r.top) + 'px');
       });

@@ -4,30 +4,67 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Im Aufbau</title>
-<meta name="description" content="Diese Seite ist im Aufbau. Hier entsteht Software für Windows, die einfach zu bedienen ist und auf dem eigenen Rechner arbeitet.">
+<meta name="description" content="Diese Seite ist im Aufbau. Hier entsteht Software für Windows.">
 <meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='13' height='13' rx='4' fill='%233d84ff'/%3E%3Crect x='17' y='2' width='13' height='13' rx='4' fill='%2312C7CE' opacity='.55'/%3E%3Crect x='2' y='17' width='13' height='13' rx='4' fill='%2312C7CE' opacity='.55'/%3E%3Crect x='17' y='17' width='13' height='13' rx='4' fill='%236fe0bf'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="stil.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="z-verlauf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d84ff"/><stop offset="1" stop-color="#6fe0bf"/></linearGradient></defs>
+  <symbol id="zeichen" viewBox="0 0 32 32">
+    <rect x="2" y="2" width="13" height="13" rx="4" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.4"/>
+    <rect x="17" y="2" width="13" height="13" rx="4" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.4"/>
+    <rect x="2" y="17" width="13" height="13" rx="4" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.4"/>
+    <rect class="hell" x="17" y="17" width="13" height="13" rx="4" fill="url(#z-verlauf)"/>
+  </symbol>
+</svg>
+
 <header class="kopf"><div class="wrap">
-  <a class="marke" href="./"><span class="zeichen" aria-hidden="true"></span><span class="txt">Software für Windows</span></a>
+  <a class="marke" href="./" aria-label="Startseite"><svg class="zeichen" aria-hidden="true"><use href="#zeichen"/></svg>Software für Windows</a>
+  <span class="status"><i></i><span>Im Aufbau</span></span>
 </div></header>
 
-<main class="wrap">
-  <section class="light-held">
-    <div class="eyebrow">Im Aufbau</div>
-    <h1>Software, die <span>bei Ihnen bleibt.</span></h1>
-    <p>Hier entsteht Software für Windows.</p>
-      </section>
+<main>
+  <section class="auftakt">
+    <div class="netz" aria-hidden="true"></div>
+    <div class="wrap inhalt">
+      <div class="eyebrow zuerst">Im Aufbau</div>
+      <h1 class="zuerst">Software, die <span>bei Ihnen bleibt.</span></h1>
+      <p class="zuerst">Hier entsteht Software für Windows.</p>
+    </div>
+    <div class="runter" aria-hidden="true">Scrollen<i></i></div>
+  </section>
 
-  <section class="bald-raster" aria-label="Bald">
-    <div class="bald-karte a licht" aria-hidden="true"><div class="geruest"><div class="t"></div><div class="k"><div><b></b><b></b><b></b><b></b><b></b></div><div class="m"><b></b><b></b></div><div><b></b><b></b><b></b><b></b></div></div></div><div class="glas"></div><span class="nr">01</span><span class="baubalken"><i></i></span><span class="schild">In Arbeit</span></div>
-    <div class="bald-karte b licht" aria-hidden="true"><div class="geruest"><div class="t"></div><div class="k"><div><b></b><b></b><b></b><b></b><b></b></div><div class="m"><b></b><b></b></div><div><b></b><b></b><b></b><b></b></div></div></div><div class="glas"></div><span class="nr">02</span><span class="baubalken"><i></i></span><span class="schild">In Arbeit</span></div>
+  <section class="wrap werkstatt" aria-label="In Arbeit">
+    <div class="kopfzeile"><div><div class="eyebrow">In der Werkstatt</div><h2>Zwei Programme entstehen gerade.</h2></div></div>
+    <div class="raster">
+      <div class="karte a" aria-hidden="true">
+        <div class="geruest"><div class="t"></div><div class="k"><div><b></b><b></b><b></b><b></b><b></b></div><div class="m"><b></b><b></b></div><div><b></b><b></b><b></b><b></b></div></div></div>
+        <span class="nr">01</span>
+        <div class="unten"><span class="balken"><i></i></span><span class="schild">In Arbeit</span></div>
+      </div>
+      <div class="karte b" aria-hidden="true">
+        <div class="geruest"><div class="t"></div><div class="k"><div><b></b><b></b><b></b><b></b><b></b></div><div class="m"><b></b><b></b></div><div><b></b><b></b><b></b><b></b></div></div></div>
+        <span class="nr">02</span>
+        <div class="unten"><span class="balken"><i></i></span><span class="schild">In Arbeit</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap worte" aria-label="Grundsätze">
+    <p><span>Offline.</span><span>Ohne Konto.</span><span>Einfach.</span></p>
   </section>
 </main>
 
-<footer class="light-fuss"><div class="wrap">
-  <span class="rechts">Diese Seite setzt keine Cookies und lädt nichts von anderen Servern.</span>
+<footer class="fuss"><div class="wrap">
+  <div>
+    <span class="marke"><svg class="zeichen" aria-hidden="true"><use href="#zeichen"/></svg>Software für Windows</span>
+    <p>Diese Seite ist im Aufbau.</p>
+    <div class="still"><i></i>Keine Cookies, nichts von anderen Servern.</div>
+  </div>
+  <div><h2>Programme</h2><ul><li>Programm 01 <span class="folgt">folgt</span></li><li>Programm 02 <span class="folgt">folgt</span></li></ul></div>
+  <div><h2>Rechtliches</h2><ul><li>Impressum <span class="folgt">folgt</span></li><li>Datenschutz <span class="folgt">folgt</span></li><li>Kontakt <span class="folgt">folgt</span></li></ul></div>
 </div></footer>
 <script src="licht.js"></script>
 </body>
